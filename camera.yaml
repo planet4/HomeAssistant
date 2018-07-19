@@ -1,0 +1,37 @@
+#  - platform: generic
+#    still_image_url: http://192.168.0.10//image/jpeg.cgi
+#    name: DCS933L
+#    username: admin
+#    password: !secret cam_password
+#
+#
+#  - platform: generic
+#   still_image_url: http://192.168.0.11//image/jpeg.cgi
+#    name: DCS2210
+#    username: admin
+#    password: !secret cam_password
+    
+    
+  - platform: mjpeg
+    still_image_url: http://192.168.0.11//image/jpeg.cgi
+    mjpeg_url: http://192.168.0.11/video/mjpg.cgi
+    name: DCS2210
+    username: admin
+    password: !secret cam_password
+    
+  - platform: mjpeg
+    still_image_url: http://192.168.0.10//image/jpeg.cgi
+    mjpeg_url: http://192.168.0.10/video/mjpg.cgi
+    name: DCS933L
+    username: admin
+    password: !secret cam_password
+    
+
+
+
+    
+#  - platform: synology
+#    url: https://xxxx.duckdns.org:5001
+#    username: admin
+#    password: !secret unifi_password
+#    verify_ssl: False

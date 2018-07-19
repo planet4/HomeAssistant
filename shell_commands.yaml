@@ -1,0 +1,2 @@
+#shell_commands.yaml
+test_cmd: touch /home/homeassistant/.homeassistant/test.txt

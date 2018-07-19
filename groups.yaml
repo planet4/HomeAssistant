@@ -1,0 +1,217 @@
+Doors:
+ name: Doors
+ icon: mdi:lock
+ view: yes
+ entities:
+   - lock.ytterdorr
+   
+lights:
+  name: Lights
+  view: yes
+  icon: mdi:lightbulb-outline
+  entities:
+   - light.dimmer_stora_badrummet_level
+   - light.taklampa_arvid
+   - light.dimmer_kitchen_level
+   - light.dimmer_livingroom_level
+# detta är den gamla   - light.aeotec_nanodimmer_badrum_level
+   
+#Automations:
+#  name: Automations
+#  view: yes
+#  icon: mdi:clock
+#  entities:
+#   - automation.julgransbelysning_off
+#   - automation.julgransbelysning_on
+#   - automation.turn_bathroom_lights_on_if_motion_detected
+#   - automation.turn_bathroom_lights_off_if_no_motion_detected
+#   - automation.alarmet
+#   - group.Automationsjul
+#   - automation.barnens_laddare_av
+#   - automation.barnens_laddare_pa
+#   - automation.turn_mirrorscreen_off_if_no_motion_detected
+#   - automation.turn_mirrorscreen_on_if_motion_detected
+#   - automation.magic_mirror_on
+#   - automation.magic_mirror_off
+#Automationsjul:
+#  name: Automations Jul
+#  view: yes
+#  icon: mdi:clock
+#  entities:
+#   - automation.julgransbelysning_off
+#   - automation.julgransbelysning_on
+
+Personer:
+  name: Personer
+#  view: yes
+  icon: mdi:clock
+  entities:
+#   - device_tracker.fredrik_oneplus5
+   - device_tracker.xprxrcpm_fredrikoneplus5
+   - device_tracker.jessicasiphone_2
+   - device_tracker.xprxrcpm_ludvigstelefon
+   - device_tracker.xprxrcpm_edvintelefon
+   - device_tracker.android60e8147c508990a8
+#   - device_tracker.desktop1hunsco
+   
+cams:
+  name: cams
+  view: yes
+  icon: mdi:camcorder
+  entities:
+   - camera.dcs2210
+   - camera.dcs933l
+  
+
+speedtest:
+  name: Speedtest
+#  view: yes
+  icon: mdi:access-point-network
+  entities:
+   - sensor.speedtest_download
+   - sensor.speedtest_upload
+   - sensor.speedtest_ping
+   
+#internet:
+#  name: Internet
+#  view: yes
+#  icon: mdi:access-point-network
+#  entities:
+#   - group.speedtest
+   
+switchar:
+  name: Switchar
+  view: yes
+  icon: mdi:mdi:power
+  entities:
+#detta är den gamla    - switch.aeotec_nanodimmer_badrum_switch
+#   - switch.dimmer_stora_badrummet_switch
+   - switch.telldus_tzwp100_plugin_switch_switch
+   - switch.telldus_tzwp100_plugin_switch_switch_2
+   - switch.dimmer_stora_badrummet_switch
+   - switch.fibaro_wall_plug_1_switch
+   - switch.magic_mirror_monitor
+   - switch.magic_mirror_rpi
+   - switch.yale_lock
+   - input_boolean.larm
+   - switch.switch
+   - switch.dimmer_kitchen_switch
+   - switch.dimmer_livingroom_switch
+
+tlah:
+  name: Temperature, Light and humidity
+#  view: yes
+  icon: mdi:oil-temperature
+  entities:
+   - sensor.multisensor_badrum_luminance
+   - sensor.multisensor_badrum_relative_humidity
+   - sensor.multisensor_badrum_temperature
+   - sensor.multisensor_lekdel__luminance
+   - sensor.multisensor_lekdel__relative_humidity
+   - sensor.multisensor_lekdel__temperature
+   - binary_sensor.multisensor_badrum_sensor
+   - binary_sensor.multisensor_lekdel__sensor
+
+#tlah2:
+#  name: Temperature, Light and humidity
+#  view: yes
+#  icon: mdi:oil-temperature
+#  entities:
+#   - group.tlah
+
+   
+alldevices:
+  name: All devices
+  view: yes
+  icon: mdi:home-automation
+  entities:
+   - group.all_devices
+   
+power:
+  name: Energy
+#  view: yes
+  icon: mdi:battery-charging
+  entities:
+   - sensor.fibaro_wall_plug_1_energy
+   - sensor.fibaro_wall_plug_1_power
+   - sensor.fibaro_wall_plug_1_power
+   - sensor.electricity_price_hasselvagen_77
+   - sensor.dimmer_stora_badrummet_power
+   - sensor.dimmer_stora_badrummet_energy
+   - sensor.dimmer_kitchen_power_2
+   - sensor.dimmer_livingroom_power_3
+   - sensor.dimmer_livingroom_energy
+   - sensor.dimmer_kitchen_energy
+   
+power2:
+  name: Energy
+  view: yes
+  icon: mdi:battery-charging
+  entities:
+   - group.power
+   
+info:
+  name: Info
+  view: yes
+  icon: mdi:information
+  entities:
+   - zwave.aeotec_multisensor_6_badrum
+   - zwave.dimmer_stora_badrummet
+#detta är den gamla   - zwave.aeotec_nanodimmer_badrum
+   - zwave.aeotec_zstick
+   - zwave.fibaro_wall_plug_1
+   - zwave.multisensor_lekdel_
+   - zwave.telldus_tzwp100_plugin_switch
+   - zwave.telldus_tzwp100_plugin_switch
+   - group.synology
+   - group.raspberry
+   - sun.sun
+   - sensor.yr_symbol
+   - group.speedtest
+   - zwave.dimmer_livingroom
+   - zwave.dimmer_kitchen
+   
+
+
+synology:
+  name: Synology
+#  view: yes
+  icon: mdi:waves
+  entities:
+   - sensor.network_up
+   - sensor.cpu_load_total
+   - sensor.memory_usage_real
+
+
+   
+raspberry:
+  name: Raspberry
+#  view: yes
+  icon: mdi:waves
+  entities:
+   - sensor.disk_used_home
+   - sensor.ram_available
+   - sensor.disk_use_percent_home
+   - sensor.memory_free
+   - sensor.cpu_temperature
+   
+magicmirror:
+  name: MagicMirror
+  view: yes
+  icon: mdi:monitor
+  entities:
+  - switch.magic_mirror_module1
+  - switch.magic_mirror_allmodules
+  - switch.magic_mirror_eyecandy
+  - switch.magic_mirror_allmodules
+   
+   
+default_view:
+  name: Home
+  view: yes
+  entities:
+  - group.personer
+  - group.tlah
+  - group.doors
+  - media_player.vardagsrummet
+  - media_player.fredriks_echo_plus

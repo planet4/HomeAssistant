@@ -1,0 +1,64 @@
+#### TIME/DATE ##################################
+#- platform: time_date
+#  display_options:
+#      - 'time'
+#      - 'date'
+
+#- platform: cpuspeed
+
+
+        
+- platform: template
+  sensors: 
+#      fredrik_home:
+#        value_template: '{% if is_state("device_tracker.fredrik_oneplus5", "home") or is_state("device_tracker.fredrik_oneplus5", "home" ) %}home{% else %}away{% endif %}'
+#      jessica_home:
+#        value_template: '{% if is_state("device_tracker.jessicasiphone_2", "home") or is_state("device_tracker.jessicasiphone_2", "home" ) %}home{% else %}away{% endif %}'        
+        
+        
+      washer_w:
+        friendly_name: 'Washer power [W]'
+        value_template: '{{ states.switch.fibaro_wall_plug_1_switch.attributes["power_consumption"] }}'
+        unit_of_measurement: 'W'
+
+      washer_w_lav:
+        friendly_name: 'Washer power < 1.8 w'
+        value_template: '{{ states.sensor.washer_w.state | float < 1.8 }}'
+#        value_template: '{{ sensor.fibaro_wall_plug_1_power.state | float < 1.5 }}'      
+
+- platform: command_line
+  sensors:
+  name: CPU Temperature
+  command: "cat /sys/class/thermal/thermal_zone0/temp"
+  unit_of_measurement: "°C"
+  value_template: '{{ value | multiply(0.001) }}'
+
+- platform: tibber
+  access_token: !secret api_tibber
+
+- platform: synologydsm
+  host: 192.168.0.100
+  username: admin
+  password: !secret password_synology
+  monitored_conditions:
+      - cpu_total_load
+      - memory_real_usage
+      - network_up
+
+- platform: speedtest
+  monitored_conditions:
+      - ping
+      - download
+      - upload
+
+
+- platform: systemmonitor
+  resources:
+      - type: disk_use_percent
+        arg: /home
+      - type: memory_free
+      
+- platform: yr
+
+
+  

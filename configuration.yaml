@@ -1,0 +1,251 @@
+homeassistant:
+  name: Home
+  latitude: !secret latitude
+  longitude: !secret longitude
+  elevation: 3
+  unit_system: metric
+  time_zone: Europe/Stockholm
+  customize: !include customize.yaml
+
+updater:
+discovery:
+
+cloud:
+  alexa:
+    filter:
+      include_domains:
+        - switch
+        - light
+#        - switch.fibaro_wall_plug_1_switch
+#        - switch.yale_lock
+
+mqtt:
+  broker: m23.cloudmqtt.com
+  port: 20570
+  username: !secret mqttcloud_user
+  password: !secret mqttcloud_password
+
+
+  
+media_player:
+  - platform: alexa
+    email: fredrik@planet4.se
+    password: !secret amazon_password
+    url: amazon.com
+  
+  
+# ########################################
+# ###                NOTIFY            ###
+# ########################################
+notify:
+
+  - name: pushbullet
+    platform: pushbullet
+    api_key: !secret pushbulletapi
+#  - platform: command_line
+#    name: 'Alexa'
+#    command: "/config/alexa_wrapper.sh -d 'ALL'"
+#    command: ""/config/alexa_wrapper.sh -d 'ALL'"
+
+
+
+
+  
+# ########################################
+# ###                GUIT              ###
+# ########################################
+map:
+frontend:
+  themes: !include themes.yaml
+  javascript_version: latest
+
+#  themes: !include themes.yaml
+# ########################################
+# ###                TRACKER           ###
+# ########################################
+
+device_tracker:
+  - platform: unifi
+    username: admin
+    password: !secret unifi_password
+    host: 192.168.0.178
+    interval_seconds: 60
+    consider_home: 180
+    verify_ssl: false
+  
+  - platform: owntracks
+  
+zone:
+  - name: White Göteborg
+    latitude: 57.703313
+    longitude: 11.962652
+    radius: 300
+    icon: mdi:keyboard
+  - name: Fonus Borås
+    latitude: 57.723673
+    longitude: 12.940743
+    radius: 150
+    icon: mdi:keyboard
+
+########################################
+###               HUBS               ###
+########################################
+
+verisure:
+  username: !secret verisure_username
+  password: !secret verisure_password
+
+zwave:
+  usb_path: /dev/ttyACM0
+  network_key: !secret zwavekey
+
+config:
+
+http:
+  api_password: !secret api_password
+  ssl_certificate: /ssl/fullchain.pem
+  ssl_key: /ssl/privkey.pem
+  base_url: !secret base_url
+  
+# ########################################
+# ###              IFRAMES            ###
+# ########################################
+  
+
+   
+   
+
+# ########################################
+# ###              SWITCHES            ###
+# ########################################
+
+switch:
+  - platform: template
+    switches:
+      yale_lock:
+        value_template: "{{ is_state('lock.ytterdorr', 'locked') }}"
+        turn_on:
+          service: lock.lock
+          entity_id: lock.ytterdorr
+          data:
+            code: !secret door_password
+        turn_off:
+          service: lock.unlock
+          entity_id: lock.ytterdorr
+          data:
+            code: 111111
+
+  - platform: command_line
+    switches:
+      magic_mirror_monitor:
+        command_on: "/usr/bin/curl -X GET http://192.168.0.77:8090/remote?action=MONITORON"
+        command_off: "/usr/bin/curl -X GET http://192.168.0.77:8090/remote?action=MONITOROFF"
+        friendly_name: MagicMirrorMonitor
+ 
+#  - platform: command_line
+#    switches:
+#      alexa_tts_welcome:
+#        command_on: "/usr/bin/curl -X GET http://192.168.0.77:8090/remote?action=REBOOT"
+#        command_off: "/usr/bin/curl -X GET http://192.168.0.77:8090/remote?action=MONITOROFF"
+#        friendly_name: Alexa TTS Welcome
+
+  - platform: command_line
+    switches:
+      magic_mirror_rpi:
+        command_on: "/usr/bin/curl -X GET http://192.168.0.77:8090/remote?action=REBOOT"
+        command_off: "/usr/bin/curl -X GET http://192.168.0.77:8090/remote?action=RESTART"
+        friendly_name: MagicMirrorRPI
+
+  - platform: command_line
+    switches:
+      cam1:
+        command_on: "/usr/bin/curl -X GET http://192.168.0.77:8090/remote?action=MONITORON"
+        command_off: "/usr/bin/curl -X GET http://192.168.0.77:8090/remote?action=MONITORON"
+        friendly_name: CameraHallen
+        
+  - platform: command_line
+    switches:
+      magic_mirror_module1:
+        command_on: /usr/bin/curl -X GET "http://192.168.0.77:8090/remote?action=SHOW&module=module_2_clock"
+        command_off: /usr/bin/curl -X GET "http://192.168.0.77:8090/remote?action=HIDE&module=module_2_clock"
+        friendly_name: Mirror module clock
+        
+  - platform: command_line
+    switches:
+      magic_mirror_allmodules:
+        command_on: /usr/bin/curl -O "http://192.168.0.77:8090/remote?action=SHOW&module=module_2_clock" -O "http://192.168.0.77:8090/remote?action=SHOW&module=module_3_MMM-Skolmaten" -O "http://192.168.0.77:8090/remote?action=SHOW&module=module_4_calendar" -O "http://192.168.0.77:8090/remote?action=SHOW&module=module_5_calendar" -O "http://192.168.0.77:8090/remote?action=SHOW&module=module_6_calendar" -O "http://192.168.0.77:8090/remote?action=SHOW&module=module_7_currentweather" -O "http://192.168.0.77:8090/remote?action=SHOW&module=module_8_weatherforecast" 
+        command_off: /usr/bin/curl -O "http://192.168.0.77:8090/remote?action=HIDE&module=module_2_clock" -O "http://192.168.0.77:8090/remote?action=HIDE&module=module_3_MMM-Skolmaten" -O "http://192.168.0.77:8090/remote?action=HIDE&module=module_4_calendar" -O "http://192.168.0.77:8090/remote?action=HIDE&module=module_5_calendar" -O "http://192.168.0.77:8090/remote?action=HIDE&module=module_6_calendar" -O "http://192.168.0.77:8090/remote?action=HIDE&module=module_7_currentweather" -O "http://192.168.0.77:8090/remote?action=HIDE&module=module_8_weatherforecast" -O "http://192.168.0.77:8090/remote?action=HIDE&module=module_10_MMM-EyeCandy"
+        friendly_name: Mirror all modules
+        
+  - platform: command_line
+    switches:
+      magic_mirror_eyecandy:
+        command_on: /usr/bin/curl -O "http://192.168.0.77:8090/remote?action=SHOW&module=module_10_MMM-EyeCandy"
+        command_off: /usr/bin/curl -O "http://192.168.0.77:8090/remote?action=HIDE&module=module_10_MMM-EyeCandy"
+        friendly_name: Mirror Eyecandy
+        
+        
+
+#  - platform: command_line
+#    switches:
+#      godis:
+#        command_on: sh alexa_remote_control.sh -d "ALL" -e speak:"welcome home"
+#        friendly_name: godis
+        
+#########################################
+####              HOME OR NOT         ###
+#########################################    
+
+  
+
+#########################################
+####              SHELL               ###
+#########################################    
+
+
+
+input_boolean:
+  larm:
+    name: larm
+    initial: off
+    icon: mdi:home
+    
+
+# ########################################
+# ###              LOGGING             ###
+# ########################################
+influxdb:
+  host: 192.168.0.59
+  database: home
+
+history:
+logbook:
+sun:
+
+recorder:
+  purge_interval: 2
+  purge_keep_days: 2
+#  db_url: sqlite:///home/user/.homeassistant/test
+#  exclude:
+#    domains:
+#      - automation
+#      - updater
+#    entities:
+#      - sun.sun # Don't record sun data
+#      - sensor.last_boot # Comes from 'systemmonitor' sensor platform
+#      - sensor.date
+logger:
+  default: error
+      
+tts:
+  platform: google
+  language: "en"
+
+# ########################################
+# ###              INCLUDES            ###
+# ########################################
+#shell_command: !include shell_commands.yaml
+group: !include groups.yaml
+automation: !include automations.yaml
+camera: !include camera.yaml
+sensor: !include sensors.yaml
