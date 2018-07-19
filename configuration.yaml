@@ -29,7 +29,7 @@ mqtt:
   
 media_player:
   - platform: alexa
-    email: fredrik@planet4.se
+    email: !secret alexa_user
     password: !secret amazon_password
     url: amazon.com
   
