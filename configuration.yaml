@@ -186,11 +186,6 @@ switch:
         
         
 
-#  - platform: command_line
-#    switches:
-#      godis:
-#        command_on: sh alexa_remote_control.sh -d "ALL" -e speak:"welcome home"
-#        friendly_name: godis
         
 #########################################
 ####              HOME OR NOT         ###
