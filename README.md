@@ -1,13 +1,16 @@
 # HomeAssistantConfiguration
 My Home Assistant Configuration
 
+
+### Changelog
+Added multisensor 6 in bathroom
+
+
 ### Current Errors
 
-* Themes
 
 ### To Do
 
-Git Pull
 Lovelace
 Utebelysning
 Alexa TTS
@@ -37,19 +40,4 @@ Alexa TTS
 * Magic Mirror
 
 
-
 ### Hass.io - Add ons
-
-* Lets Encrypt
-{
-  "lets_encrypt": {
-    "accept_terms": true,
-    "certfile": "fullchain.pem",
-    "keyfile": "privkey.pem"
-  },
-  "token": "mytoken",
-  "domains": [
-    "xxx.duckdns.org"
-  ],
-  "seconds": 300
-}
