@@ -206,12 +206,12 @@ magicmirror:
   - switch.magic_mirror_allmodules
    
    
-default_view:
-  name: Home
-  view: yes
-  entities:
-  - group.personer
-  - group.tlah
-  - group.doors
-  - media_player.vardagsrummet
-  - media_player.fredriks_echo_plus
+#default_view:
+#  name: Home
+#  view: yes
+#  entities:
+#  - group.personer
+#  - group.tlah
+#  - group.doors
+#  - media_player.vardagsrummet
+#  - media_player.fredriks_echo_plus
