@@ -27,12 +27,7 @@ mqtt:
 
 
   
-media_player:
-  - platform: alexa
-    email: !secret alexa_user
-    password: !secret amazon_password
-    url: amazon.com
-  
+
   
 # ########################################
 # ###                NOTIFY            ###
@@ -48,7 +43,12 @@ notify:
 #    command: ""/config/alexa_wrapper.sh -d 'ALL'"
 
 
-
+media_player:
+  - platform: alexa
+    email: !secret alexa_user
+    password: !secret amazon_password
+    url: amazon.com
+  
 
   
 # ########################################
