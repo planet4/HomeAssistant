@@ -96,7 +96,7 @@ switchar:
    - input_boolean.larm
    - switch.switch
    - switch.tak_koket_switch
-   - switch.tak_vardagsrumet_switch
+   - switch.tak_vardagsrummet_switch
 
 tlah:
   name: Temperature, Light and humidity
