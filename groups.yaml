@@ -103,14 +103,14 @@ tlah:
 #  view: yes
   icon: mdi:oil-temperature
   entities:
-   - sensor.multisensor_badrum_luminance
-   - sensor.multisensor_badrum_relative_humidity
-   - sensor.multisensor_badrum_temperature
-   - sensor.multisensor_lekdel__luminance
-   - sensor.multisensor_lekdel__relative_humidity
-   - sensor.multisensor_lekdel__temperature
-   - binary_sensor.multisensor_badrum_sensor
-   - binary_sensor.multisensor_lekdel__sensor
+   - sensor.multisensor_stora_badrummet_luminance
+   - sensor.multisensor_stora_badrummet_relative_humidity
+   - sensor.multisensor_stora_badrummet_temperature
+   - sensor.multisensor_lekdelen_luminance
+   - sensor.multisensor_lekdelen_relative_humidity
+   - sensor.multisensor_lekdelen_temperature
+   - binary_sensor.multisensor_stora_badrummet_sensor
+   - binary_sensor.multisensor_lekdelen_sensor
 
 #tlah2:
 #  name: Temperature, Light and humidity
