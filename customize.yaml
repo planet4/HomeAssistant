@@ -1,4 +1,4 @@
-sensor.aetec_multisensor_6_lekdel_luminance:
+sensor.multisensor_lekdel_luminance:
   friendly_name: Lekdel Ljus
   hidden: false
 device_tracker.gemmasnewmini:
@@ -30,7 +30,7 @@ sensor.aeotec_multisensor_6_badrum_luminance:
   hidden: false
 sensor.tradfri_remote_control:
   hidden: true
-sensor.aeotec_multisensor_6_badrum_temperature:
+sensor.multisenso_badrum_temperature:
   friendly_name: Badrum Temperatur
   hidden: false
 switch.fibaro_wall_plug_1_switch:
@@ -39,17 +39,17 @@ switch.telldus_tzwp100_plugin_switch_switch:
   friendly_name: Telldus switch 1
 switch.telldus_tzwp100_plugin_switch_switch_2:
   friendly_name: Telldus switch 2
-sensor.aetec_multisensor_6_lekdel_relative_humidity:
+sensor.multisensor_lekdel_relative_humidity:
   friendly_name: Lekdel Luftfuktighet
   hidden: false
 group.cams:
   hidden: false
 group.tlah:
   hidden: false
-sensor.aetec_multisensor_6_lekdel_temperature:
+sensor.multisensor_lekdel_temperature:
   hidden: false
   friendly_name: Lekdel Temperatur
-sensor.aeotec_multisensor_6_badrum_relative_humidity:
+sensor.multisensor_badrum_relative_humidity:
   friendly_name: Badrum Luftfuktighet
   hidden: false
 group.internet:
