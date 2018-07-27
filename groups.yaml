@@ -12,8 +12,8 @@ lights:
   entities:
    - light.tak_stora_badrummet_level
    - light.taklampa_arvid
-   - light.dimmer_kitchen_level
-   - light.dimmer_livingroom_level
+   - light.tak_koket_level
+   - light.tak_vardagsrummet_level
 # detta är den gamla   - light.aeotec_nanodimmer_badrum_level
    
 #Automations:
@@ -95,8 +95,8 @@ switchar:
    - switch.yale_lock
    - input_boolean.larm
    - switch.switch
-   - switch.dimmer_kitchen_switch
-   - switch.dimmer_livingroom_switch
+   - switch.tak_koket_switch
+   - switch.tak_vardagsrumet_switch
 
 tlah:
   name: Temperature, Light and humidity
@@ -138,10 +138,10 @@ power:
    - sensor.electricity_price_hasselvagen_77
    - sensor.tak_stora_badrummet_power
    - sensor.tak_stora_badrummet_energy
-   - sensor.dimmer_kitchen_power_2
-   - sensor.dimmer_livingroom_power_3
-   - sensor.dimmer_livingroom_energy
-   - sensor.dimmer_kitchen_energy
+   - sensor.tak_koket_power_2
+   - sensor.tak_vardagsrummetpower_3
+   - sensor.tak_vardagsrummet_energy
+   - sensor.tak_koket_energy
    
 power2:
   name: Energy
@@ -168,8 +168,8 @@ info:
    - sun.sun
    - sensor.yr_symbol
    - group.speedtest
-   - zwave.dimmer_livingroom
-   - zwave.dimmer_kitchen
+   - zwave.tak_vardagsrummet
+   - zwave.tak_koket
    
 
 
