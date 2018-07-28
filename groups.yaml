@@ -213,5 +213,5 @@ default_view:
   - group.personer
   - group.tlah
   - group.doors
- - media_player.vardagsrummet
+  - media_player.vardagsrummet
   - media_player.fredriks_echo_plus
