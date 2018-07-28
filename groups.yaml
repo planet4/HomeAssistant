@@ -10,10 +10,10 @@ lights:
   view: yes
   icon: mdi:lightbulb-outline
   entities:
-   - light.tak_stora_badrummet_level
+   - light.roof_main_bathroom_level
    - light.taklampa_arvid
-   - light.tak_koket_level
-   - light.tak_vardagsrummet_level
+   - light.roof_kitchen_level
+   - light.roof_livingroom_level
 # detta är den gamla   - light.aeotec_nanodimmer_badrum_level
    
 #Automations:
@@ -86,31 +86,31 @@ switchar:
   entities:
 #detta är den gamla    - switch.aeotec_nanodimmer_badrum_switch
 #   - switch.dimmer_stora_badrummet_switch
-   - switch.telldus_tzwp100_plugin_switch_switch
-   - switch.telldus_tzwp100_plugin_switch_switch_2
-   - switch.tak_stora_badrummet_switch
-   - switch.fibaro_wall_plug_1_switch
+   - switch.telldus1
+   - switch.telldus2
+   - switch.roof_main_bathroomt_switch
+   - switch.fibaro1
    - switch.magic_mirror_monitor
    - switch.magic_mirror_rpi
    - switch.yale_lock
    - input_boolean.larm
    - switch.switch
-   - switch.tak_koket_switch
-   - switch.tak_vardagsrummet_switch
+   - switch.roof_kitchen
+   - switch.roof_livingroom
 
 tlah:
   name: Temperature, Light and humidity
 #  view: yes
   icon: mdi:oil-temperature
   entities:
-   - sensor.multisensor_stora_badrummet_luminance
-   - sensor.multisensor_stora_badrummet_relative_humidity
-   - sensor.multisensor_stora_badrummet_temperature
-   - sensor.multisensor_lekdelen_luminance
-   - sensor.multisensor_lekdelen_relative_humidity
-   - sensor.multisensor_lekdelen_temperature
-   - binary_sensor.multisensor_stora_badrummet_sensor
-   - binary_sensor.multisensor_lekdelen_sensor
+   - sensor.multisensor_main_bathroom_luminance
+   - sensor.multisensor_main_babathroom_relative_humidity
+   - sensor.multisensor_main_bathroom_temperature
+   - sensor.multisensor_playroom_luminance
+   - sensor.multisensor_playroom_relative_humidity
+   - sensor.multisensor_playroom_temperature
+   - binary_sensor.multisensor_main_bathroom_sensor
+   - binary_sensor.multisensor_playroom_sensor
 
 #tlah2:
 #  name: Temperature, Light and humidity
@@ -132,16 +132,16 @@ power:
 #  view: yes
   icon: mdi:battery-charging
   entities:
-   - sensor.fibaro_wall_plug_1_energy
-   - sensor.fibaro_wall_plug_1_power
-   - sensor.fibaro_wall_plug_1_power
+   - sensor.fibaro1_energy
+   - sensor.fibaro1_power
+   - sensor.fibaro1_power
    - sensor.electricity_price_hasselvagen_77
-   - sensor.tak_stora_badrummet_power
-   - sensor.tak_stora_badrummet_energy
-   - sensor.tak_koket_power_2
-   - sensor.tak_vardagsrummetpower_3
-   - sensor.tak_vardagsrummet_energy
-   - sensor.tak_koket_energy
+   - sensor.roof_main_bathroom_power
+   - sensor.roof_main_bathroom_energy
+   - sensor.roof_kitchen_power_2
+   - sensor.roof_livingroom_power_3
+   - sensor.roof_livingroom_energy
+   - sensor.roof_kitchen_energy
    
 power2:
   name: Energy
@@ -159,17 +159,17 @@ info:
    - zwave.tak_stora_badrummet
 #detta är den gamla   - zwave.aeotec_nanodimmer_badrum
    - zwave.aeotec_zstick
-   - zwave.fibaro_wall_plug_1
-   - zwave.multisensor_lekdel_
-   - zwave.telldus_tzwp100_plugin_switch
-   - zwave.telldus_tzwp100_plugin_switch
+   - zwave.fibaro1
+   - zwave.multisensor_playroom_
+   - zwave.telldus1_switch
+   - zwave.telldus2_switch
    - group.synology
    - group.raspberry
    - sun.sun
    - sensor.yr_symbol
    - group.speedtest
-   - zwave.tak_vardagsrummet
-   - zwave.tak_koket
+   - zwave.roof_livingroom
+   - zwave.roof_kitchen
    
 
 
