@@ -14,7 +14,7 @@ lights:
    - light.taklampa_arvid
    - light.roof_kitchen_level
    - light.roof_livingroom_level
-# detta är den gamla   - light.aeotec_nanodimmer_badrum_level
+# detta är den gamla test   - light.aeotec_nanodimmer_badrum_level
    
 #Automations:
 #  name: Automations
