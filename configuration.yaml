@@ -44,8 +44,8 @@ notify:
 
 media_player:
   - platform: alexa
-    email: !secret "alexa_user"
-    password: !secret "amazon_password"
+    email: !secret alexa_user
+    password: !secret amazon_password
     url: "amazon.com"
   
 
