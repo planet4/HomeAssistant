@@ -42,12 +42,11 @@ notify:
 #    command: "/config/alexa_wrapper.sh -d 'ALL'"
 #    command: ""/config/alexa_wrapper.sh -d 'ALL'"
 
-
 media_player:
   - platform: alexa
-    email: !secret alexa_user
-    password: !secret amazon_password
-    url: amazon.com
+    email: !secret "alexa_user"
+    password: !secret "amazon_password"
+    url: "amazon.com"
   
 
   
