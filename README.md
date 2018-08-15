@@ -42,10 +42,10 @@ More z wave plugs
 
 
 ### Hass.io - Add ons
-Git (used to backup my configuration)
-SSH Server
-Duck DNS
-Node Red
+*Git (used to backup my configuration)
+*SSH Server
+*Duck DNS
+*Node Red
 
 ### Node Red
 Node Red is used for all automatisations
