@@ -4,7 +4,7 @@ My Home Assistant Configuration
 
 ### Changelog
 Added multisensor 6 in bathroom
-
+Added ALexa mediaplayer
 
 ### Current Errors
 
@@ -12,11 +12,11 @@ Added multisensor 6 in bathroom
 ### To Do
 
 Lovelace
-Utebelysning
-Alexa TTS
+Outdoor lights
+More z wave plugs
 
 ### Running Hass.io on a Raspberry Pi 3
-* Using Home Assistant Cloud for Alexa
+
 
 ## Hubs
 * Aeon Labs Z Wave Stick (GEN 5)
@@ -33,6 +33,7 @@ Alexa TTS
 * RPI2/3
 * Dlink CAM
 * Fibaro Wall plugs
+* Telldus Wall plugs
 
 ## Software
 * Influxdb
@@ -41,3 +42,12 @@ Alexa TTS
 
 
 ### Hass.io - Add ons
+Git (used to backup my configuration)
+SSH Server
+Duck DNS
+Node Red
+
+### Node Red
+Node Red is used for all automatisations
+
+
