@@ -59,6 +59,10 @@
       - type: memory_free
       
 - platform: yr
-
+  monitored_conditions:
+      - temperature
+      - windSpeed
+      - fog
+      - precipitation
 
   
