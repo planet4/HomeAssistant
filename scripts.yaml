@@ -20,6 +20,6 @@ alexa_tts_test_execute:
   sequence:
     - service: media_player.alexa_tts
       data_template:
-        entity_id: media_player.batman
-        message: “ The outside temperature is {{states ('sensor.dark_sky_apparent_temperature') }} degrees ... Command execution, complete ! ”
+        entity_id: media_player.fredriks_echo_plus
+        message: “ The outside temperature is {{states ('sensor.multisensor_main_bathroom_temperature') }} degrees ... Command execution, complete ! ”
 #===============================================================================
