@@ -141,12 +141,6 @@ switch:
         command_off: "/usr/bin/curl -X GET http://192.168.0.77:8090/remote?action=MONITOROFF"
         friendly_name: MagicMirrorMonitor
  
-#  - platform: command_line
-#    switches:
-#      alexa_tts_welcome:
-#        command_on: "/usr/bin/curl -X GET http://192.168.0.77:8090/remote?action=REBOOT"
-#        command_off: "/usr/bin/curl -X GET http://192.168.0.77:8090/remote?action=MONITOROFF"
-#        friendly_name: Alexa TTS Welcome
 
   - platform: command_line
     switches:
@@ -155,33 +149,28 @@ switch:
         command_off: "/usr/bin/curl -X GET http://192.168.0.77:8090/remote?action=RESTART"
         friendly_name: MagicMirrorRPI
 
-  - platform: command_line
-    switches:
-      cam1:
-        command_on: "/usr/bin/curl -X GET http://192.168.0.77:8090/remote?action=MONITORON"
-        command_off: "/usr/bin/curl -X GET http://192.168.0.77:8090/remote?action=MONITORON"
-        friendly_name: CameraHallen
+
         
-  - platform: command_line
-    switches:
-      magic_mirror_module1:
-        command_on: /usr/bin/curl -X GET "http://192.168.0.77:8090/remote?action=SHOW&module=module_2_clock"
-        command_off: /usr/bin/curl -X GET "http://192.168.0.77:8090/remote?action=HIDE&module=module_2_clock"
-        friendly_name: Mirror module clock
-        
-  - platform: command_line
-    switches:
-      magic_mirror_allmodules:
-        command_on: /usr/bin/curl -O "http://192.168.0.77:8090/remote?action=SHOW&module=module_2_clock" -O "http://192.168.0.77:8090/remote?action=SHOW&module=module_3_MMM-Skolmaten" -O "http://192.168.0.77:8090/remote?action=SHOW&module=module_4_calendar" -O "http://192.168.0.77:8090/remote?action=SHOW&module=module_5_calendar" -O "http://192.168.0.77:8090/remote?action=SHOW&module=module_6_calendar" -O "http://192.168.0.77:8090/remote?action=SHOW&module=module_7_currentweather" -O "http://192.168.0.77:8090/remote?action=SHOW&module=module_8_weatherforecast" 
-        command_off: /usr/bin/curl -O "http://192.168.0.77:8090/remote?action=HIDE&module=module_2_clock" -O "http://192.168.0.77:8090/remote?action=HIDE&module=module_3_MMM-Skolmaten" -O "http://192.168.0.77:8090/remote?action=HIDE&module=module_4_calendar" -O "http://192.168.0.77:8090/remote?action=HIDE&module=module_5_calendar" -O "http://192.168.0.77:8090/remote?action=HIDE&module=module_6_calendar" -O "http://192.168.0.77:8090/remote?action=HIDE&module=module_7_currentweather" -O "http://192.168.0.77:8090/remote?action=HIDE&module=module_8_weatherforecast" -O "http://192.168.0.77:8090/remote?action=HIDE&module=module_10_MMM-EyeCandy"
-        friendly_name: Mirror all modules
-        
-  - platform: command_line
-    switches:
-      magic_mirror_eyecandy:
-        command_on: /usr/bin/curl -O "http://192.168.0.77:8090/remote?action=SHOW&module=module_10_MMM-EyeCandy"
-        command_off: /usr/bin/curl -O "http://192.168.0.77:8090/remote?action=HIDE&module=module_10_MMM-EyeCandy"
-        friendly_name: Mirror Eyecandy
+#  - platform: command_line
+#    switches:
+#      magic_mirror_module1:
+#        command_on: /usr/bin/curl -X GET "http://192.168.0.77:8090/remote?action=SHOW&module=module_2_clock"
+#        command_off: /usr/bin/curl -X GET "http://192.168.0.77:8090/remote?action=HIDE&module=module_2_clock"
+#        friendly_name: Mirror module clock
+#        
+#  - platform: command_line
+#    switches:
+#      magic_mirror_allmodules:
+#        command_on: /usr/bin/curl -O "http://192.168.0.77:8090/remote?action=SHOW&module=module_2_clock" -O "http://192.168.0.77:8090/remote?action=SHOW&module=module_3_MMM-Skolmaten" -O "http://192.168.0.77:8090/remote?action=SHOW&module=module_4_calendar" -O "http://192.168.0.77:8090/remote?action=SHOW&module=module_5_calendar" -O "http://192.168.0.77:8090/remote?action=SHOW&module=module_6_calendar" -O "http://192.168.0.77:8090/remote?action=SHOW&module=module_7_currentweather" -O "http://192.168.0.77:8090/remote?action=SHOW&module=module_8_weatherforecast" 
+#        command_off: /usr/bin/curl -O "http://192.168.0.77:8090/remote?action=HIDE&module=module_2_clock" -O "http://192.168.0.77:8090/remote?action=HIDE&module=module_3_MMM-Skolmaten" -O "http://192.168.0.77:8090/remote?action=HIDE&module=module_4_calendar" -O "http://192.168.0.77:8090/remote?action=HIDE&module=module_5_calendar" -O "http://192.168.0.77:8090/remote?action=HIDE&module=module_6_calendar" -O "http://192.168.0.77:8090/remote?action=HIDE&module=module_7_currentweather" -O "http://192.168.0.77:8090/remote?action=HIDE&module=module_8_weatherforecast" -O "http://192.168.0.77:8090/remote?action=HIDE&module=module_10_MMM-EyeCandy"
+#        friendly_name: Mirror all modules
+#        
+#  - platform: command_line
+#    switches:
+#      magic_mirror_eyecandy:
+#        command_on: /usr/bin/curl -O "http://192.168.0.77:8090/remote?action=SHOW&module=module_10_MMM-EyeCandy"
+#        command_off: /usr/bin/curl -O "http://192.168.0.77:8090/remote?action=HIDE&module=module_10_MMM-EyeCandy"
+#        friendly_name: Mirror Eyecandy
         
         
 
@@ -243,3 +232,4 @@ group: !include groups.yaml
 automation: !include automations.yaml
 camera: !include camera.yaml
 sensor: !include sensors.yaml
+script: !include scripts.yaml
