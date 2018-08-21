@@ -1,1 +1,25 @@
 
+#===============================================================================
+# ALEXA says: Sensor value ... Command execution, complete !
+#-------------------------------------------------------------------------------
+
+alexa_tts_test_call:
+  alias: "Alexa tts test call"
+  sequence:
+  # Cancel "execute" script, in case it has timers, to reset them
+    - service: script.turn_off
+      data:
+        entity_id: script.alexa_tts_test_execute
+  # Call "execute" script into action again
+    - service: script.turn_on
+      data:
+        entity_id: script.alexa_tts_test_execute
+#-------------------------------------------------------------------------------
+alexa_tts_test_execute:
+  alias: "Alexa tts test execute"
+  sequence:
+    - service: media_player.alexa_tts
+      data_template:
+        entity_id: media_player.batman
+        message: “ The outside temperature is {{states ('sensor.dark_sky_apparent_temperature') }} degrees ... Command execution, complete ! ”
+#===============================================================================
