@@ -12,11 +12,11 @@ discovery:
 
 cloud:
   alexa:
-    filter:
-      include_domains:
-        - switch
-        - light
-        - script
+#    filter:
+#      include_domains:
+#        - switch
+#        - light
+#        - script
 #        - switch.fibaro_wall_plug_1_switch
 #        - switch.yale_lock
 
