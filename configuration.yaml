@@ -13,8 +13,7 @@ discovery:
 cloud:
   alexa:
     filter:
-    
-    include_entities:
+        include_entities:
         - script.alexa_tts_test_call
         - script.alexa_tts_test_execute
         - light.roof_kitchen_level
