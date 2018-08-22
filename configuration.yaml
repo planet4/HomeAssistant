@@ -13,12 +13,20 @@ discovery:
 cloud:
   alexa:
     filter:
-      include_domains:
-        - switch
-        - light
-        - script
-      exclude_domains:
-        -groups
+    
+    include_entities:
+        - script.alexa_tts_test_call
+        - script.alexa_tts_test_execute
+        - light.roof_kitchen_level
+        - light.roof_main_bathroom_level
+        - switch.roof_livingroom_switch
+        
+#      include_domains:
+#        - switch
+#        - light
+#        - script        
+#      exclude_domains:
+#        -groups
 #        - switch.fibaro_wall_plug_1_switch
 #        - switch.yale_lock
 
