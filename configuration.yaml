@@ -14,9 +14,11 @@ cloud:
   alexa:
     filter:
       include_domains:
-#        - switch
-#        - light
-#        - script
+        - switch
+        - light
+        - script
+      exclude_domains:
+        -groups
 #        - switch.fibaro_wall_plug_1_switch
 #        - switch.yale_lock
 
