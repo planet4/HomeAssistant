@@ -12,8 +12,8 @@ discovery:
 
 cloud:
   alexa:
-#    filter:
-#      include_domains:
+    filter:
+      include_domains:
 #        - switch
 #        - light
 #        - script
