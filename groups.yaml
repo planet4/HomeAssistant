@@ -206,6 +206,15 @@ magicmirror:
   - switch.magic_mirror_allmodules
    
    
+scripts:
+  name: Scripts
+  view: yes
+  icon: mdi:file-document
+  entities:
+  - script.alexa_tts_test_call
+  - script.alexa_tts_test_execute
+
+
 default_view:
   name: Home
   view: yes
