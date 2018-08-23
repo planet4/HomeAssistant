@@ -61,6 +61,8 @@ cams:
   entities:
    - camera.dcs2210
    - camera.dcs933l
+   - sensor.multisensor_main_bathroom_burglar
+   - sensor.multisensor_playroom_burglar
   
 
 speedtest:
