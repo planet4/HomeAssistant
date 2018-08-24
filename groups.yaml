@@ -11,7 +11,7 @@ lights:
   icon: mdi:lightbulb-outline
   entities:
    - light.roof_main_bathroom_level
-   - light.taklampa_arvid
+   - light.taklampa_arvid_2
    - light.roof_kitchen_level
    - light.roof_livingroom_level
 # detta är den gamla test2   - light.aeotec_nanodimmer_badrum_level
