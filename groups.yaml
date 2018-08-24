@@ -88,7 +88,7 @@ switchar:
   entities:
 #detta är den gamla    - switch.aeotec_nanodimmer_badrum_switch
 #   - switch.dimmer_stora_badrummet_switch
-   - switch.telldus1
+   - switch.telldus1_switch
    - switch.telldus2
    - switch.roof_main_bathroomt_switch
    - switch.fibaro1
