@@ -203,7 +203,6 @@ input_boolean:
     initial: off
     icon: mdi:home
     
-input_boolean:
   guest:
     name: guest
     initial: off
