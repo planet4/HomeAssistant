@@ -96,6 +96,7 @@ switchar:
    - switch.magic_mirror_rpi
    - switch.yale_lock
    - input_boolean.larm
+   - input_boolean.guest
    - switch.switch
    - switch.roof_kitchen
    - switch.roof_livingroom
