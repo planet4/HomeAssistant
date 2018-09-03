@@ -212,9 +212,14 @@ input_boolean:
 # ########################################
 # ###              LOGGING             ###
 # ########################################
+
+#influxdb:
+#  host: 192.168.0.59
+#  database: home
+  
 influxdb:
-  host: 192.168.0.59
-  database: home
+  host: 192.168.0.140
+  database: HA
 
 history:
 logbook:
